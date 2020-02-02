@@ -26,10 +26,6 @@ class ShowsController < ApplicationController
   end
 
   private
-  def json_response(object, status = :ok)
-    render json: object, status: status
-  end
-
   def show_params
     params.permit(:name)
   end
