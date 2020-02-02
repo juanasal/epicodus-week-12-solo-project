@@ -7,8 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 class Seed
-  # Quote.destroy_all
-  # Show.destroy_all
 
   def self.begin
     seed = Seed.new
@@ -30,6 +28,7 @@ class Seed
 
   end
 end
+
 
 Seed.begin
 
