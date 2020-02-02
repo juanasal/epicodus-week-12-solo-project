@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_02_01_193912) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "quotes", force: :cascade do |t|
     t.string "quotation"
     t.integer "show_id"
@@ -25,4 +28,5 @@ ActiveRecord::Schema.define(version: 2020_02_01_193912) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "quotes", "shows"
 end
