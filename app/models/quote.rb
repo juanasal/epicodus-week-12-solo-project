@@ -1,5 +1,5 @@
 class Quote < ApplicationRecord
-  belongs_to :show, dependent: :destroy
+  belongs_to :show
   validates :quotation, presence: true
   validates :show_id, presence: true
 end

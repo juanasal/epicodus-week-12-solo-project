@@ -1,5 +1,5 @@
 class Show < ApplicationRecord
-  has_many :quotes
+  has_many :quotes, dependent: :destroy
 
   validates :name, presence: true
 end
