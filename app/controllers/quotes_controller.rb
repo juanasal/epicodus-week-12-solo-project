@@ -14,20 +14,24 @@ class QuotesController < ApplicationController
 
   def create
     @show = Show.find(params[:show_id])
-    @quote = Quote.create(quote_params)
-    json_response(@quote)
+    @quote = Quote.create!(quote_params)
+    json_response(@quote, :created)
   end
 
   def update
     @show = Show.find(params[:show_id])
     @quote = Quote.find(params[:id])
-    @quote.update(quote_params)
+    if @quote.update!(quote_params)
+      render status: 200, json: { message: "Successfully updated."}
+    end
   end
 
   def destroy
     @show = Show.find(params[:show_id])
     @quote = Quote.find(params[:id])
-    @quote.destroy
+    if @quote.destroy!
+      render status: 200, json: { message: "Successfully deleted."}
+    end
   end
 
   private

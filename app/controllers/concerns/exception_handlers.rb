@@ -1,5 +1,4 @@
 require 'active_support/concern'
-require 'response'
 
 module ExceptionHandlers
   extend ActiveSupport::Concern
