@@ -5,6 +5,12 @@ class ShowsController < ApplicationController
     json_response(@shows)
   end
 
+  def search
+    query = params[:query]
+    @show = Show.find_by(name: query)
+    json_response(@show)
+  end
+
   def show
     @show = Show.find(params[:id])
     json_response(@show)
