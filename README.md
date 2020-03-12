@@ -1,6 +1,6 @@
 # Cult Classic Quoter
 
-#### An app for reviewing specialty foods, January 31, 2020
+#### An app to see quotes from your favorite cult classic TV shows, January 31, 2020
 
 #### By Jonathan Salfen
 
